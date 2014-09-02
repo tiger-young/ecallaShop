@@ -1,0 +1,109 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+</script>
+ 
+ <div class="block clearfix " style=" z-index:999999999;   position:relative" >
+ <div class="f_l">
+ 
+ 
+ 
+ <a id="logo" href="../index.php"  >
+	<img src="../images/logo.gif" />
+ 
+	</a>
+ 
+ 
+ 
+ <form  id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()"    >
+   <input name="keywords" type="text" id="keyword" class="searchArea" maxlength="120" value="start your search here..." onclick="javascript:this.value='';"    />
+ <button class="searchBtn"   type="submit"></button> 
+   </form>
+ 
+ 
+ 
+ </div>
+ 
+ 
+ <div style=" float:right">
+ 
+ <div class="f_r log"> 
+
+ 
+ <div style="float:right;     ">
+ <div class="t">
+ {insert_scripts files='transport.js,utils.js'}
+   <font id="ECS_MEMBERZONE">{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font>
+ 
+    <!--{if $navigator_list.top}-->
+   
+    <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
+    
+    
+    
+      <a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a>
+        
+    <!-- {/foreach} -->
+ 
+   <!-- {/if} -->    
+    </div>
+	<div style=" clear:both"></div>  
+    <div class="b">
+	
+ 
+	  
+<div class="buy_car_bg_box" style="float:right; padding-top:5px; padding-left:0;  ">  
+<div class="buy_car_bg "   >
+<div  id="ECS_CARTINFO">
+ {insert name='cart_info'}
+</div>
+</div> 
+</div>  
+
+
+
+	   </div>  
+ </div>  
+ 
+ 
+ 
+   
+ </div>
+ 
+ 
+ 
+ 
+ 
+</div>
+<div  class="blank"  ></div>
+
+ 
+ 
+
+ 
+ </div>
+<div class="blank5"></div>
+
+<div id="mainNav" class="clearfix block"  >
+
+<ul class="u1" onmouseover="this.className='u1 u1_over'" onmouseout="this.className='u1'" >
+  <a class="a1" href="../index.php"{if $navigator_list.config.index eq 1} id="cur"{/if}>HOME</a>
+</ul>  
+  <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav } -->
+  <ul class="u1" onmouseover="this.className='u1 u1_over'" onmouseout="this.className='u1'" >
+  <a  class="a1" href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if} {if $nav.active eq 1} id="cur"{/if}>{$nav.name}</a>
+  
+ 
+	
+	
+  </ul>  
+ <!-- {/foreach} -->
+</div>
+
+ <div class="blank"></div>
+
+ 
+
+ 
+
+
